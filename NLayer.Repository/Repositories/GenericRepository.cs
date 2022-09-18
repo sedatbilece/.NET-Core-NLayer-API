@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 
 namespace NLayer.Repository.Repositories
 {
+    //in here do something at memory not effect db
+
     public class GenericRepository<T> : IGenericRepository<T> where T : class
     {
         protected readonly AppDbContext _context;
@@ -35,7 +37,7 @@ namespace NLayer.Repository.Repositories
            return await _dbSet.AnyAsync(expression);
         }
 
-        public  IQueryable<T> GetAll(Expression<Func<T, bool>> expression)
+        public  IQueryable<T> GetAll()
         {
             return _dbSet.AsNoTracking().AsQueryable();
         }

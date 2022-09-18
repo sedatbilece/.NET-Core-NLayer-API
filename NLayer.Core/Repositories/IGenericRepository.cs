@@ -12,7 +12,7 @@ namespace NLayer.Core.Repositories
 
         Task<T> GetByIdAsync(int id);
 
-        IQueryable<T> GetAll (Expression<Func<T, bool>> expression);
+        IQueryable<T> GetAll ();
 
         //productRepository.where(x => x.id>5).orderBy.ToList();
         // x => x.id>5 -> expression
