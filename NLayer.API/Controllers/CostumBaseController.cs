@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using NLayer.Core.DTOs;
 
-namespace NLayer.API
+namespace NLayer.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
@@ -10,7 +10,7 @@ namespace NLayer.API
     {
 
         [NonAction]// no endpoint
-        public IActionResult CreateActionResult<T>( CostumResponseDto<T> responseDto )
+        public IActionResult CreateActionResult<T>(CostumResponseDto<T> responseDto)
         {
             if (responseDto.StatusCode == 204)
             {
