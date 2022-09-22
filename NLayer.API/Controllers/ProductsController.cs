@@ -7,8 +7,7 @@ using NLayer.Core.Services;
 
 namespace NLayer.API.Controllers
 {
-    [Route("api/[controller]")]
-    [ApiController]
+    
     public class ProductsController : CostumBaseController
     {
         private readonly IMapper _mapper;
